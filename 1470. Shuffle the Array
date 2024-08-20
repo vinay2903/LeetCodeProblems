@@ -30,16 +30,11 @@ nums.length == 2n
 ###############solution##################
 class Solution:
     def shuffle(self, nums: List[int], n: int) -> List[int]:
-        z=[0]*2*n
-        c=0
+        z=[]
         for i in range(0,n):
-
-            z[c]=nums[i]
-            c=c+2
-        c=1
-        for j in range(n,len(nums)):
-            z[c]=nums[j]
-            c=c+2
+            z.append(nums[i])
+            z.append(nums[i+n])
+            
         return z
 
 
